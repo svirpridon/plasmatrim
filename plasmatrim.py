@@ -319,7 +319,7 @@ class Program(object):
                    
         Having hertz too high is generally non-harmful on modern
         x86 hardware. The default value for hertz is 500, good on
-        cPython 3.4 on an intel core i5-4200U."""
+        cPython 3.4 on an Intel Core i5-4200U."""
         seq = []
         shifted = self.slots[1:]
         shifted.append(self.slots[0])
@@ -447,7 +447,7 @@ class PlasmaTrim(object):
         raise IOError(msg.format(self))
 
 
-if __name__ == '__main__':
+def main():
     import argparse
     parser = argparse.ArgumentParser(description='Set plasmatrim LED colors.')
     parser.add_argument('--list', help='List all the plasmatrims',
@@ -503,3 +503,6 @@ if __name__ == '__main__':
 
     for device in devices:
         device.leds.show()
+
+if __name__ == '__main__':
+    main()
